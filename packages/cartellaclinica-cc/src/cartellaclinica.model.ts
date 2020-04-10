@@ -1,16 +1,13 @@
+import { appConstants as c } from '@convector-sample/common';
+import { ConvectorModel, Default, ReadOnly, Required, Validate, FlatConvectorModel } from '@worldsibu/convector-core';
 import * as yup from 'yup';
-import {
-  ConvectorModel,
-  Default,
-  ReadOnly,
-  Required,
-  Validate
-} from '@worldsibu/convector-core-model';
+import { Personale } from 'personale-cc';
+
 
 export class Cartellaclinica extends ConvectorModel<Cartellaclinica> {
   @ReadOnly()
   @Required()
-  public readonly type = 'io.worldsibu.cartellaclinica';
+  public readonly type = c.CONVECTOR_MODEL_PATH_CARTELLACLINICA;
 
   @Required()
   @Validate(yup.string())
@@ -31,14 +28,4 @@ export class Cartellaclinica extends ConvectorModel<Cartellaclinica> {
   @Required()
   @Validate(yup.boolean())
   public consenso: boolean;
-
-  /*@ReadOnly()
-  @Required()
-  @Validate(yup.number())
-  public created: number;
-
-  @Required()
-  @Validate(yup.number())
-  public modified: number;*/
 }
-

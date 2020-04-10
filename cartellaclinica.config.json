@@ -11,6 +11,11 @@
       "name": "personale-cc",
       "version": "file:./packages/personale-cc",
       "controller": "PersonaleController"
+    },
+    {
+      "name": "@convector-sample/common",
+      "version": "file:./packages/common",
+      "controller": "CommonController"
     }
   ]
 }
